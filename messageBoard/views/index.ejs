@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <h2>Here are your messages:</h2>
+    <% messages.forEach((msg) => { %>
+        <h3>Name: <%- msg.user %></h3>
+        <h3>Message: <%- msg.text %></h3>
+        <h3>created on: <%- msg.added %></h3>
+    <% }) %>
+    <a href="/new">To create a new entry!</a>
+  </body>
+</html>
